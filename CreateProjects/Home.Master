@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="CreateProjects.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">My SampleBlog</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" href="Default.aspx" runat="server">Home</a>
+    <a class="p-2 text-dark" href="Food/Home.aspx" runat="server">Food</a>
+    <a class="p-2 text-dark" href="Sports/Home.aspx" runat="server">Sports</a>
+    <a class="p-2 text-dark" href="Movies/Home.aspx" runat="server">Movies</a>
+  </nav>
+</div>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="container">
+  <div class="row">
+    <div class="col-10">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder></div>
+    <div class="col-2">Category
+        <hr />
+        <ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  Food
+    <span class="badge badge-primary badge-pill">
+		 <a class="p-2 text-dark" href="Food/Home.aspx" runat="server"><asp:Label ID="LabFood" runat="server" Text=""></asp:Label></a>
+    </span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  Sports
+    <span class="badge badge-primary badge-pill">
+         <a class="p-2 text-dark" href="Sports/Home.aspx" runat="server"><asp:Label ID="LabSports" runat="server" Text=""></asp:Label></a>
+    </span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Movies
+    <span class="badge badge-primary badge-pill">
+         <a class="p-2 text-dark" href="Movies/Home.aspx" runat="server"><asp:Label ID="LabMovies" runat="server" Text=""></asp:Label></a>
+    </span>
+  </li>
+</ul>
+    </div>
+  </div>
+</div>
+        </div>
+    </form>
+</body>
+</html>
